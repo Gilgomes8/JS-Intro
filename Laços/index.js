@@ -1,68 +1,93 @@
-educacao = prompt("Você concluiu o ensino médio? s- Sim n- Não")
-idade = prompt("Qual sua idade?")
-estuda = prompt("Atualmente você estuda em outra faculdade? s- Sim n- Não")
-if (educacao === "n")
+//Imprimindo alguns numeros
+
+
+let i=0
+while(i <= 10)
 {
-    console.log("Você precisa concluir o ensino médio antes da faculdade")
-}
-else if (idade < 18)
-{
-    console.log("Você ainda não tem a idade necessária")
-}
-else if(estuda === "s")
-{
-    console.log("Você já estuda atualmente")
-}
-else
-{
-    console.log("Você já pode começar nessa faculdade")
+    console.log(i)
+    i++    
 }
 
-//Utilizando função
-
-educacao = prompt("Você concluiu o ensino médio? s- Sim n- Não")
-idade = prompt("Qual sua idade?")
-estuda = prompt("Atualmente você estuda em outra faculdade? s- Sim n- Não")
-
-function checagem(ed, id, es)
+for(c=0; c<=10; c++)
 {
-    ch1=false
-    ch2=false
-    ch3=false
-    if (ed === "n")
-{
-    console.log("Você precisa concluir o ensino médio antes da faculdade")
+    console.log(c)
 }
-    else
-    {   
-        console.log("Você tem a primeira condição")
-        ch1=true
+
+
+i=0
+while(i<20)
+{
+    i++
+    if (i===1)
+    {
+    console.log(`O ciclista deu ${i} volta`)
     }
-if (id < 18)
-{
-    console.log("Você ainda não tem a idade necessária")
-}
     else
     {
-        console.log("Você tem a segunda condição")
-        ch2=true
+    console.log(`O ciclista deu ${i} voltas`) 
     }
-if(es === "s")
-{
-    console.log("Você já estuda atualmente")
 }
+
+//Laços de repetição com apresentação de dados
+
+for(i=1; i<=20; i++)
+{
+    if (i===1)
+    {
+    console.log(`O ciclista deu ${i} volta`)
+    }
     else
     {
-        console.log("Você tem a terceira condição")
-        ch3=true
+    console.log(`O ciclista deu ${i} voltas`) 
     }
-if (ch1&ch2&ch3===true)
+}
+
+const numeros = [10,20,30,40,50]
+for(i=0; i<numeros.length; i++)
 {
-    console.log("Você já pode começar numa faculdade")
+    elementos = numeros[i]
+    console.log(elementos)
 }
-else
+
+// Usando for of
+
+const nomes = ["Gil", "Melissa", "Fulano", "Beltrano"]
+for(i of nomes)
 {
-    console.log("Você não atingiu todas as condições necessárias")
+    console.log(i)
 }
+
+i = 0
+
+while (i<=10)
+{
+    if( i%2===0)
+    {
+        console.log(i)
+    }
+    i++
 }
-checagem(educacao,idade,estuda)
+
+//Exemplo de contagem regressiva com apresentação de dados
+
+i=10
+while(i>=0)
+{
+    if(i>0 && i%2 === 0)
+    {
+    console.log(`Tic || Restam: ${i} Segundos`)
+    }
+        else if (i>1)
+        {
+        console.log(`Tac || Restam: ${i} Segundos`)
+        }
+            else if(i===1)
+            {
+        console.log(`Tac || Resta: ${i} Segundo`)
+            }
+                else
+                {
+                 console.log("Kabum!! Game Over T.T")
+                }
+i--
+}
